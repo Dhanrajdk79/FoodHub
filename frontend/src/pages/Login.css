@@ -1,0 +1,391 @@
+
+/* ========================================
+   FOODHUB LOGIN PAGE
+======================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffffff;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ========================================
+   LEFT BRAND SECTION
+======================================== */
+
+.login-brand-section {
+    min-height: 100vh;
+    padding: 45px 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    background:
+        linear-gradient(135deg, rgba(35, 20, 12, 0.91), rgba(35, 20, 12, 0.65)),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.login-brand-logo,
+.mobile-login-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.login-brand-logo span span,
+.mobile-login-logo span span {
+    color: #ff7a24;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 13px;
+    background: #ff7625;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.login-brand-content {
+    max-width: 500px;
+    margin: auto 0;
+}
+
+.brand-tagline {
+    display: inline-block;
+    color: #ff9b5e;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+}
+
+.login-brand-content h1 {
+    font-size: clamp(45px, 5vw, 72px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+    margin: 0 0 25px;
+    font-weight: 800;
+}
+
+.login-brand-content h1 span {
+    color: #ff812e;
+}
+
+.login-brand-content p {
+    max-width: 410px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.login-brand-footer {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+}
+
+/* ========================================
+   RIGHT FORM SECTION
+======================================== */
+
+.login-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+    background: #fffaf6;
+}
+
+.login-form-card {
+    width: 100%;
+    max-width: 440px;
+}
+
+.mobile-login-logo {
+    display: none;
+}
+
+.login-heading {
+    margin-bottom: 28px;
+}
+
+.login-eyebrow {
+    color: #f47721;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.login-heading h2 {
+    margin: 12px 0 9px;
+    color: #28211d;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.login-heading p {
+    color: #88817b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   LOGIN / REGISTER TABS
+======================================== */
+
+.login-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f1ece7;
+    padding: 5px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.login-tabs button {
+    border: none;
+    padding: 12px;
+    border-radius: 9px;
+    background: transparent;
+    color: #77706a;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.login-tabs button.active {
+    background: #ffffff;
+    color: #f47721;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* ========================================
+   ALERT MESSAGE
+======================================== */
+
+.login-alert {
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.login-alert.error {
+    color: #bd3030;
+    background: #fff0f0;
+    border: 1px solid #ffd7d7;
+}
+
+.login-alert.success {
+    color: #21834c;
+    background: #effbf3;
+    border: 1px solid #ccefd7;
+}
+
+/* ========================================
+   INPUT FIELDS
+======================================== */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.login-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.login-input-group label {
+    color: #38312c;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.login-input-wrapper {
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 15px;
+    border: 1px solid #e8e1da;
+    border-radius: 10px;
+    background: white;
+    color: #a29a93;
+    transition: 0.2s ease;
+}
+
+.login-input-wrapper:focus-within {
+    border-color: #ff852f;
+    box-shadow: 0 0 0 3px rgba(255, 133, 47, 0.12);
+}
+
+.login-input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #302923;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.login-input-wrapper input::placeholder {
+    color: #aaa29b;
+}
+
+.password-toggle {
+    border: none;
+    background: transparent;
+    color: #928981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.login-submit-btn {
+    min-height: 54px;
+    margin-top: 7px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff852f, #f15b16);
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 16px rgba(241, 91, 22, 0.2);
+}
+
+.login-submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 9px 20px rgba(241, 91, 22, 0.28);
+}
+
+.login-submit-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   BOTTOM TEXT
+======================================== */
+
+.login-bottom-text {
+    margin-top: 25px;
+    text-align: center;
+    color: #89817b;
+    font-size: 13px;
+}
+
+.login-bottom-text button {
+    border: none;
+    background: transparent;
+    color: #f47721;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.login-security-note {
+    margin-top: 32px;
+    text-align: center;
+    color: #aaa29b;
+    font-size: 11px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+    .login-page {
+        grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .login-brand-section {
+        padding: 35px 7%;
+    }
+
+    .login-brand-content h1 {
+        font-size: 48px;
+    }
+
+    .login-form-section {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .login-page {
+        display: block;
+        min-height: 100vh;
+    }
+
+    .login-brand-section {
+        display: none;
+    }
+
+    .login-form-section {
+        min-height: 100vh;
+        padding: 35px 22px;
+    }
+
+    .login-form-card {
+        max-width: 450px;
+    }
+
+    .mobile-login-logo {
+        display: flex;
+        color: #302923;
+        font-size: 25px;
+        margin-bottom: 38px;
+    }
+
+    .login-heading h2 {
+        font-size: 29px;
+    }
+
+    .login-security-note {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 380px) {
+    .login-form-section {
+        padding: 25px 16px;
+    }
+
+    .login-heading h2 {
+        font-size: 26px;
+    }
+}

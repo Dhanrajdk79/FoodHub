@@ -1,0 +1,532 @@
+
+/* ========================================
+   FOODHUB - MY ORDERS
+======================================== */
+
+.my-orders-page {
+    min-height: 75vh;
+    margin: 0;
+    padding: 45px 20px 70px;
+    background: #f7f8fc;
+}
+
+.my-orders-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.my-orders-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.orders-eyebrow {
+    color: #f26a21;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.my-orders-header h1 {
+    margin: 8px 0;
+    color: #202536;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.my-orders-header p {
+    margin: 0;
+    color: #858e9e;
+    font-size: 14px;
+}
+
+.refresh-orders {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 10px;
+    background: #f26a21;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.refresh-orders:hover:not(:disabled) {
+    background: #df5711;
+    transform: translateY(-1px);
+}
+
+.refresh-orders:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   ORDER COUNT
+======================================== */
+
+.orders-count {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    color: #737e90;
+    font-size: 13px;
+}
+
+.orders-count svg {
+    color: #f26a21;
+}
+
+.orders-count strong {
+    color: #303747;
+}
+
+/* ========================================
+   ORDER LIST
+======================================== */
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.order-card {
+    padding: 25px;
+    border: 1px solid #e9ebf1;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 6px 22px rgba(26, 35, 55, 0.045);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.order-card:hover {
+    box-shadow: 0 10px 28px rgba(26, 35, 55, 0.075);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   ORDER HEADER
+======================================== */
+
+.order-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.order-label {
+    color: #929aaa;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.order-card-header h3 {
+    margin: 6px 0 0;
+    color: #252c3b;
+    font-size: 17px;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.order-status,
+.payment-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.order-status {
+    background: #fff2e8;
+    color: #d75b17;
+    text-transform: capitalize;
+}
+
+.status-pending {
+    background: #fff5d9;
+    color: #986400;
+}
+
+.status-confirmed,
+.status-preparing {
+    background: #edf4ff;
+    color: #2861b3;
+}
+
+.status-ready {
+    background: #f1eaff;
+    color: #7041b6;
+}
+
+.status-delivered,
+.status-completed {
+    background: #e8f8ee;
+    color: #168047;
+}
+
+.status-cancelled {
+    background: #fff0ef;
+    color: #c53e39;
+}
+
+/* ========================================
+   ORDER DATE AND PICKUP
+======================================== */
+
+.order-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 22px 0;
+}
+
+.order-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    min-width: 0;
+}
+
+.order-detail-item > svg {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    color: #f26a21;
+}
+
+.order-detail-item div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-detail-item span {
+    color: #929aaa;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.order-detail-item strong {
+    color: #424b5c;
+    font-size: 13px;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   PAYMENT DETAILS
+======================================== */
+
+.order-payment-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    padding: 17px;
+    border: 1px solid #edf0f4;
+    border-radius: 12px;
+    background: #fafbfc;
+}
+
+.payment-detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.payment-detail-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #929aaa;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.payment-detail-label svg {
+    color: #f26a21;
+}
+
+.payment-detail-item > strong {
+    padding-left: 25px;
+    color: #343c4c;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.payment-paid {
+    background: #e8f8ee;
+    color: #168047;
+}
+
+.payment-pending {
+    background: #fff5d9;
+    color: #986400;
+}
+
+.payment-failed {
+    background: #fff0ef;
+    color: #c53e39;
+}
+
+.payment-refunded {
+    background: #edf4ff;
+    color: #2861b3;
+}
+
+/* ========================================
+   ORDER FOOTER
+======================================== */
+
+.order-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 21px;
+    margin-top: 20px;
+    border-top: 1px solid #edf0f4;
+}
+
+.order-card-footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-card-footer > div span {
+    color: #929aaa;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.order-card-footer h3 {
+    margin: 0;
+    color: #f26a21;
+    font-size: 23px;
+    font-weight: 850;
+}
+
+/* ========================================
+   INVOICE BUTTON
+======================================== */
+
+.print-invoice-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 10px 15px;
+    border: 1px solid #e3e6ed;
+    border-radius: 9px;
+    background: #fff;
+    color: #3c4555;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.print-invoice-button:hover {
+    border-color: #f26a21;
+    background: #fff7f1;
+    color: #e75d16;
+}
+
+/* ========================================
+   EMPTY ORDERS
+======================================== */
+
+.empty-orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px 20px;
+    border: 1px solid #e9ebf1;
+    border-radius: 17px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 6px 22px rgba(26, 35, 55, 0.04);
+}
+
+.empty-orders-icon {
+    display: grid;
+    width: 75px;
+    height: 75px;
+    place-items: center;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: #fff1e8;
+    color: #f26a21;
+}
+
+.empty-orders h2 {
+    margin: 0 0 9px;
+    color: #252c3b;
+    font-size: 22px;
+}
+
+.empty-orders p {
+    max-width: 380px;
+    margin: 0 0 22px;
+    color: #858e9e;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.empty-orders a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 9px;
+    background: #f26a21;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.empty-orders a:hover {
+    background: #df5711;
+}
+
+/* ========================================
+   LOADING AND ERROR
+======================================== */
+
+.my-orders-message {
+    display: flex;
+    min-height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #737e90;
+    font-size: 14px;
+}
+
+.loading-icon {
+    color: #f26a21;
+    animation: orders-spin 1s linear infinite;
+}
+
+@keyframes orders-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.orders-error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 17px;
+    border: 1px solid #f4cccc;
+    border-radius: 10px;
+    background: #fff3f2;
+    color: #bd3838;
+    font-size: 13px;
+}
+
+.orders-error button {
+    padding: 8px 13px;
+    border: 0;
+    border-radius: 7px;
+    background: #bd3838;
+    color: white;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 700px) {
+    .my-orders-page {
+        padding: 28px 14px 45px;
+    }
+
+    .my-orders-header {
+        align-items: flex-start;
+    }
+
+    .my-orders-header h1 {
+        font-size: 27px;
+    }
+
+    .my-orders-header p {
+        max-width: 230px;
+        line-height: 1.5;
+    }
+
+    .refresh-orders {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .order-card {
+        padding: 18px;
+    }
+
+    .order-details {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .order-payment-details {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-orders-header {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .order-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .order-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .print-invoice-button {
+        width: 100%;
+    }
+
+    .orders-error {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

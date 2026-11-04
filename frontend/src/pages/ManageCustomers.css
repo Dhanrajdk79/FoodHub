@@ -1,0 +1,137 @@
+
+.manage-customers {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.customers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.customers-header h2 {
+    margin-bottom: 8px;
+}
+
+.customers-header p {
+    color: #666;
+}
+
+.customers-header button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #e85d04;
+    color: white;
+    cursor: pointer;
+}
+
+.customers-header button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.customers-summary {
+    margin-bottom: 25px;
+}
+
+.customer-summary-card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    max-width: 260px;
+}
+
+.customer-summary-card h3 {
+    font-size: 30px;
+    color: #e85d04;
+    margin-bottom: 5px;
+}
+
+.customer-summary-card p {
+    color: #666;
+}
+
+.customers-table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.customers-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+.customers-table th,
+.customers-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.customers-table th {
+    background: #f8f8f8;
+    font-weight: 600;
+}
+
+.customers-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.customers-message {
+    padding: 20px;
+    color: #666;
+}
+
+.customers-error {
+    padding: 15px;
+    color: #b42318;
+    background: #fee4e2;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.customers-success {
+    padding: 15px;
+    color: #166534;
+    background: #dcfce7;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.delete-customer-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-customer-btn:hover {
+    background: #b91c1c;
+}
+
+.delete-customer-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .manage-customers {
+        padding: 15px;
+    }
+
+    .customers-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
